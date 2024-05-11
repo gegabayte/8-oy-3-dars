@@ -1,0 +1,112 @@
+.container {
+    width: 700px;
+    margin: 50px auto;
+}
+
+.header {
+    flex-direction: column;
+}
+
+.todoTitle {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(66, 73, 110);
+}
+
+.addModal {
+    background: rgb(76, 0, 255);
+    color: #fff;
+    border: 1px solid rgb(0, 38, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form input {
+    width: 300px;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 10px;
+}
+
+.addTODO {
+    background: rgb(76, 0, 255);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.todoCardsContainer {
+    background: rgb(238, 238, 238);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.modalAdd {
+    width: 700px;
+}
+
+
+.todoCard {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.todoCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todoTitlee {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox {
+    margin-top:5px;
+}
+
+.todoTitle p {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(66, 73, 110);
+}
+
+.changeIcon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.change {
+    width: 35px;
+    height: 35px;
+    background: rgb(238, 238, 238);
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
