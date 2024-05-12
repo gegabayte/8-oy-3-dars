@@ -145,30 +145,32 @@ function App() {
           </Fade>
         </Modal>
 
-        <div className="todoCardsContainer">
-          {todos.map((todo) => (
-            <div key={todo.id} className="todoCard">
-              <div className="todoTitlee">
-                <input className="checkbox"
-                  type="checkbox"
-                  checked={todo.completed}
-                  onChange={() => toggleComplete(todo.id)}
-                />
-                <p
-                  style={{
-                    textDecoration: todo.completed ? "line-through" : "none",
-                  }}
-                >
-                  {todo.text}
-                </p>
+        {
+          todos.length > 0 && <div className="todoCardsContainer">
+            {todos.map((todo) => (
+              <div key={todo.id} className="todoCard">
+                <div className="todoTitlee">
+                  <input className="checkbox"
+                    type="checkbox"
+                    checked={todo.completed}
+                    onChange={() => toggleComplete(todo.id)}
+                  />
+                  <p
+                    style={{
+                      textDecoration: todo.completed ? "line-through" : "none",
+                    }}
+                  >
+                    {todo.text}
+                  </p>
+                </div>
+                <div className="changeIcon">
+                  <FaTrash className="change" onClick={() => removeTodo(todo.id)} />
+                  <RiPencilFill className="change" />
+                </div>
               </div>
-              <div className="changeIcon">
-                <FaTrash className="change" onClick={() => removeTodo(todo.id)} />
-                <RiPencilFill className="change" />
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        }
       </div>
     </>
   );
