@@ -52,16 +52,7 @@ const Fade = React.forwardRef<HTMLDivElement, FadeProps>(function Fade(
 });
 
 const style = {
-  position: "absolute" as "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 500,
-  bgcolor: "background.paper",
-  border: "2px solid transparent",
-  borderRadius: "10px",
-  boxShadow: 24,
-  p: 4,
+  position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: 500, bgcolor: "background.paper", border: "2px solid transparent", borderRadius: "10px", boxShadow: 24, p: 4,
 };
 interface TodoItem {
   id: string;
@@ -76,8 +67,8 @@ function App() {
   const [todos, setTodos] = useState<TodoItem[]>([]);
   const [newTodo, setNewTodo] = useState("");
 
-  const addTodo = (e) => {
-    e.preventDefault();
+  const addTodo = (event: React.MouseEvent) => {
+    event.preventDefault();
     if (newTodo !== "") {
       const newId = crypto.randomUUID();
       const newTodoItem: TodoItem = {
@@ -106,10 +97,10 @@ function App() {
   };
   return (
     <>
-      <div className="container">
+      <div className="w-[700px] mx-auto mt-40">
         <div className="header">
-          <h2 className="todoTitle">TODO LIST</h2>
-          <button onClick={handleOpen} className="addModal">
+          <h2 className="flex justify-center mb-8 text-[36px]">TODO LIST</h2>
+          <button onClick={handleOpen} className="bg-sky-600	 text-white   cursor-pointer py-[10px] px-[20px] text[16px] mt-12 rounded-lg">
             Add Task
           </button>
         </div>
@@ -132,13 +123,9 @@ function App() {
                 You can add information to the todo app
               </Typography>
               <Typography id="spring-modal-description" sx={{ mt: 2 }}>
-                <form onSubmit={addTodo} className="form">
-                  <input
-                    type="text"
-                    value={newTodo}
-                    onChange={(e) => setNewTodo(e.target.value)}
-                  />
-                  <button className="addTODO">Add Todo</button>
+                <form className="flex justify-between items-center">
+                  <input className="px-12 py-4 w-[300px]" type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
+                  <button onClick={addTodo} className="bg-sky-600	 text-white   cursor-pointer py-[10px] px-[20px] text[16px] rounded-lg">Add Todo</button>
                 </form>
               </Typography>
             </Box>

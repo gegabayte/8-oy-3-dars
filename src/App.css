@@ -1,21 +1,19 @@
-.container {
+/* .container {
     width: 700px;
     margin: 50px auto;
-}
+} */
 
-.header {
-    flex-direction: column;
-}
 
-.todoTitle {
+
+/* .todoTitle {
     text-align: center;
     font-size: 36px;
     font-weight: 700;
     color: rgb(66, 73, 110);
-}
+} */
 
-.addModal {
-    background: rgb(76, 0, 255);
+/* .addModal {
+    background:;
     color: #fff;
     border: 1px solid rgb(0, 38, 255);
     border-radius: 10px;
@@ -24,7 +22,7 @@
     font-size: 16px;
     font-weight: 600;
     margin-top: 20px;
-}
+} */
 
 .form {
     display: flex;
@@ -41,7 +39,7 @@
     border-radius: 10px;
 }
 
-.addTODO {
+/* .addTODO {
     background: rgb(76, 0, 255);
     color: #fff;
     border: none;
@@ -52,7 +50,7 @@
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 20px;
-}
+} */
 
 .todoCardsContainer {
     background: rgb(238, 238, 238);
